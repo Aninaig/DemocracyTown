@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
 </head>
 
 <body>
@@ -17,10 +17,39 @@
         
         <div id="test">
             <div id="answer">
-                <p class="inline">Ich wünsche mir...</p>
-                <!--<p class="inline" id="blinking">|</p>-->
+                <form id="regForm" action="">
+
+                    <div class="tab">
+                        <p><input placeholder="Ich wünsche mir..." id="frage" oninput="this.className = ''"></p>
+                        
+                    </div>
+
+                    <div class="tab">
+                        <p><input placeholder="Vorname" id="vorname" oninput="this.className = ''"></p>
+                        <p><input placeholder="Alter" id="alter" oninput="this.className = ''"></p>
+                    </div>
+
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Zurück</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Weiter</button>
+                        </div>
+                    </div>
+
+                    <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                      </div>
+
+                </form>
             </div>
         </div>
+    </div>
+
+    <div>
+        
     </div>
 
     <div id="container">
@@ -57,5 +86,7 @@
         }
         </script>
     <script type="module" src="./main.js"></script>
+    <script src="./form.js"></script>
+    
 </body>
 </html>
