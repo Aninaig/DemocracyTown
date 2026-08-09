@@ -8,28 +8,62 @@
 </head>
 
 <body>
-
+    <div class="image"><img src="DemocracyTownLogo.png" alt="Democracy Town Schild" id="image"></div>
     <div id="heading">
-        <div class="image"><img src="DemocracyTownLong.png" alt="Democracy Town Schild" id="image"></div>
-        <div>
-            <h1>WAS KANN POLITIK FÜR DICH TUN?</h1>
-        </div>
-        
-        <div id="test">
-            <div id="answer">
-                <p>Dankeschön! Komme in zwei Tagen wieder um zu sehen wie dein Wunsch die Stadt verändert.</p>
+        <div id="obenRechts">
+            <div id="links">
+                <div>
+                    <h1>WAS KANN POLITIK FÜR DICH TUN?</h1>
+                </div>
+                
+                <div id="test">
+                    <div id="answer">
+                        <p>Dankeschön! Dein  Wunsch wird bearbeitet. Komme in zwei Tagen wieder, <br> um zu sehen, wie dein Wunsch die Stadt verändert.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div>
-        
-    </div>
+    <div id="balken"></div>
 
     <div id="container">
-        <div id="buttons">
-            <button class="help">Antworten</button><br>
-            <button class="help">Impressum</button>
+
+        <div id="rahmen">
+            <button class="buttons" id="alt" onclick="offen()">Antworten ansehen</button>
+            <button class="buttons" id="imp" onclick="offen2()">Impressum</button>
+        </div>
+
+        <div id="bottom-section">
+            <button id="kleinX"onclick="zu()">X</button><br>
+
+            <div id="antworten">
+                <div id="flex">
+                    <div class="antworten1" id="first">
+                        <img src="test.png" alt="test image" class="bild1">
+                        <div class="box box1">
+                            <h3>Gianina, 22</h3>
+                            <p>wünscht sich mehr <br> bezahlbaren Wohnraum</p>
+                        </div>
+                    </div>
+                    <div class="antworten1">
+                        <img src="test.png" alt="test image" class="bild2">
+                        <div class="box box2">
+                            <h3>Gianina, 22</h3>
+                            <p>wünscht sich mehr <br> bezahlbaren Wohnraum</p>
+                        </div>
+                    </div>
+                    <div class="antworten1">
+                        <img src="test.png" alt="test image" class="bild1">
+                    </div>
+                    <div class="antworten1">
+                        <img src="test.png" alt="test image" class="bild1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="impressum">
+            <h2>Impressum</h2>
         </div>
     </div>
     
@@ -61,6 +95,7 @@
         </script>
     <script type="module" src="./main.js"></script>
     <script src="./form.js"></script>
+    <script src="./buttons.js"></script>
     
 </body>
 </html>

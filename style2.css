@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
 }
 
  #new{
@@ -22,32 +21,66 @@
 
  #heading{
     position: fixed;
-    top: 2%;
+    top: 0px;
     width: 100%;
+    height: 18vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 35%);
+    z-index: 3;
+    font-family: sans-serif;
+    font-size: 10px;
+    color: aliceblue;
+    background-color: #170039;
+ }
+
+ #balken{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 13.5vh;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
     text-align: center;
     z-index: 2;
     font-family: sans-serif;
     font-size: 10px;
-    color: aliceblue;
+    background-color: aliceblue;
+    color: #170039;
+ }
+
+ #obenRechts{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform-origin: right;
+    transform: perspective(500px) translateX(0%) translateY(-26%) rotateY(-15deg) rotateZ(2deg);
+ }
+
+ #links{
     
+    justify-content: flex-start;
+    margin-left: 570px;
+    margin-top: 80px;
  }
 
  #test{
-    display: flex;
-    justify-content: center;
     padding-top: 5px;
  }
 
+ h1{
+    margin-left: 15px;
+    font-size:x-large;
+ }
+
  #image{
-    width: 380px;
-    z-index: 1; 
+    width: 250px;
+    position: relative;
+    z-index: 200; 
+    left: 5vw;
+    top: -10px;
  }
 
 
-  
-  h1 {
-    text-align: center;  
-  }
+
   
   input {
     background-color: aliceblue;
@@ -56,31 +89,31 @@
   #frage{
     border-radius: 18px;
     border-style: none;
-    width: 500px;
+    width: 700px;
     padding: 5px;
     padding-left: 15px;
     margin-left: 5px;
-    font-size: large;
+    font-size: x-large;
  }
 
  #vorname{
     border-radius: 18px;
     border-style: none;
-    width: 200px;
+    width: 250px;
     padding: 5px;
     padding-left: 15px;
     margin-left: 5px;
-    font-size: large;
+    font-size: x-large;
  }
 
  #alter{
     border-radius: 18px;
     border-style: none;
-    width: 200px;
+    width: 250px;
     padding: 5px;
     padding-left: 15px;
     margin-left: 5px;
-    font-size: large;
+    font-size: x-large;
  }
 
  #regForm{
@@ -103,24 +136,31 @@
   }
   
   button {
-    background-color: #e44982;
+    background-color: #170039;
     color: white;
-    border: none;
+    border: 1px solid aliceblue;
     border-radius: 18px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: large;
+    font-size: x-large;
     cursor: pointer;
     margin-left: 7px;
   }
   
   button:hover {
-    opacity: 0.8;
+    background-color: aliceblue;
+    color: #170039;
+  }
+  
+  #prevBtn:hover {
+    background-color: aliceblue;
+    color: #170039;
   }
   
   #prevBtn {
-    background-color: #bbbbbb;
+    background-color: #6a79ab;
+    color: aliceblue;
   }
   
   /* Make circles that indicate the steps of the form: */
@@ -146,30 +186,83 @@
   }
 
  #container{
-    position: relative;
+    position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 330px;
+    bottom: 0px;
+    
+    
  }
 
- #buttons{
+ #impressum{
     z-index: 100;
     position: absolute;
-    padding: 15px;
-    bottom: 0;
-    left: 0;
- }
-
- .help{
-    z-index: 100;
+    display: none;
+    width: 100vw;
+    height: 330px;
     background-color: #e44982;
-    color: aliceblue;
-    border: solid 2px aliceblue;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
  }
 
+ #antworten{
+    z-index: 100;
+    position: absolute;
+    display: none;
+    background-color: #e44982;
+    padding-bottom: 15px;
+    padding-top: 15px;
+ }
+
+ #flex{
+    display: flex;
+ }
+
+ .antworten1{
+    background-color: aliceblue;
+    width: 300px;
+    height: 300px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ #first{
+    margin-left: 0;
+ }
+
+ .bild1{
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    transform-origin: top;
+    transform: perspective(500px) translateY(-50%) rotateX(-38deg);
+ }
+
+ .bild2{
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    transform-origin: top;
+    transform: perspective(500px) translateY(-50%) rotateX(38deg);
+ }
+
+ .box{
+    transform-style: preserve-3d;
+ }
+
+ .box.box1{
+    
+    transform-origin: top;
+    transform: perspective(500px) translateY(-50%) rotateX(-38deg);
+ }
+
+ .box.box2{
+    
+    transform-origin: top;
+    transform: perspective(500px) translateY(-50%) rotateX(38deg);
+ }
 
  .inline{
     /*display: inline-block;*/
@@ -190,13 +283,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 300px;
+    height: 300px;
     transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 700px;
+    clip-path: path("M 10,18 A 18,18 0,0,1 28,0 L 272,0 A 18,18 0,0,1 290,18 L 290,264 A 18,18 0,0,1 272,282 L 165,282 L 150,300 L 135,282 L 28,282 A 18,18 0,0,1 10,264 L 10,18 Z");
     font-family: sans-serif;
-    background-color: #e44982;
-    color: aliceblue;
-    border: 2px solid aliceblue;
+    background-color: aliceblue;
+    color: 170039;
+    border: none;
  }
 
  .modal-wrapper{
@@ -208,4 +302,43 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+ }
+
+
+
+
+ /*BUTTONS UNTEN*/
+
+ #rahmen{
+    position: absolute;
+    bottom: 1vh;
+    z-index: 100;
+ }
+
+ #alt{
+    display: inline;
+    color: aliceblue;
+    background-color: #170039;
+    margin-left: 15px;
+    border: none;
+ }
+
+ #imp{
+    display: inline;
+    background-color: aliceblue;
+    color: #170039;
+ }
+
+ .buttons{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 18px;
+    font-size: larger;
+ }
+
+ #kleinX{
+    position: relative;
+    z-index: 100;
+    display: none;
+    
  }
