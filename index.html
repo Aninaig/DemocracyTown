@@ -9,52 +9,53 @@
 
 <body>
     <div class="image"><img src="DemocracyTownLogo.png" alt="Democracy Town Schild" id="image"></div>
-    <div id="heading">
-        <div id="obenRechts">
-            <div id="links">
-                <div>
-                    <h1>WAS KANN POLITIK FÜR DICH TUN?</h1>
-                </div>
-                
-                <div id="test">
-                    <div id="answer">
-                        <form id="regForm" action="https://formsubmit.co/d83d406145cb0c1a17439076e199b0f8" method="POST">
-                            <!--Honeypot-->
-                            <input type="text" name="_honey" style="display: none;">
-                            <!--Disable Captcha-->
-                            <input type="hidden" name="_captcha" value="false">
+    <div id="obenRechts">
+        <div id="links">
+            <div>
+                <h1>WAS KANN POLITIK FÜR DICH TUN?</h1>
+            </div>
+            
+            <div id="test">
+                <div id="answer">
+                    <form id="regForm" action="https://formsubmit.co/d83d406145cb0c1a17439076e199b0f8" method="POST">
+                        <!--Honeypot-->
+                        <input type="text" name="_honey" style="display: none;">
+                        <!--Disable Captcha-->
+                        <input type="hidden" name="_captcha" value="false">
 
-                            <input type="hidden" name="_next" value="https://aninaig.github.io/DemocracyTown/success.html">
+                        <input type="hidden" name="_next" value="https://aninaig.github.io/DemocracyTown/success.html">
 
-                            <div class="tab">
-                                <p><input placeholder="Ich wünsche mir..." id="frage" name="Antwort" oninput="this.className = ''"></p>
-                                
+                        <div class="tab">
+                            <p><input placeholder="Ich wünsche mir..." id="frage" name="Antwort" oninput="this.className = ''"></p>
+                            
+                        </div>
+
+                        <div class="tab">
+                            <p><input placeholder="Vorname" id="vorname" name="Vorname" oninput="this.className = ''"></p>
+                            <p><input placeholder="Alter" id="alter" name="Alter" oninput="this.className = ''"></p>
+                        </div>
+
+                        <div style="overflow:auto;">
+                            <div style="float:right;">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Zurück</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Weiter</button>
                             </div>
+                        </div>
 
-                            <div class="tab">
-                                <p><input placeholder="Vorname" id="vorname" name="Vorname" oninput="this.className = ''"></p>
-                                <p><input placeholder="Alter" id="alter" name="Alter" oninput="this.className = ''"></p>
-                            </div>
+                        <div style="text-align:center;margin-top:40px;">
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                        </div>
 
-                            <div style="overflow:auto;">
-                                <div style="float:right;">
-                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Zurück</button>
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Weiter</button>
-                                </div>
-                            </div>
-
-                            <div style="text-align:center;margin-top:40px;">
-                                <span class="step"></span>
-                                <span class="step"></span>
-                                <span class="step"></span>
-                                <span class="step"></span>
-                            </div>
-
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="heading">
+        
     </div>
     <div id="balken"></div>
 
