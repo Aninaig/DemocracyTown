@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow: hidden;
+}
+
  #new{
     position: fixed;
     height: 100%;
@@ -49,17 +53,15 @@
  #obenRechts{
     display: flex;
     flex-direction: column;
-    height: 200px;
-    transform-style: preserve-3d;
-    transform-origin: right;
-    transform: perspective(500px) translateX(0%) translateY(-26%) rotateY(-15deg) rotateZ(2deg);
+    height: 100px;
+    
  }
 
  #links{
     
     justify-content: flex-start;
-    margin-left: 570px;
-    margin-top: 80px;
+    margin-left: 850px;
+    margin-top: 30px;
  }
 
  #test{
@@ -68,7 +70,7 @@
 
  h1{
     margin-left: 15px;
-    font-size:x-large;
+    font-size:large;
  }
 
  #image{
@@ -89,31 +91,31 @@
   #frage{
     border-radius: 18px;
     border-style: none;
-    width: 700px;
+    width: 500px;
     padding: 5px;
     padding-left: 15px;
     margin-left: 5px;
-    font-size: x-large;
+    font-size: large;
  }
 
  #vorname{
     border-radius: 18px;
     border-style: none;
-    width: 250px;
+    width: 150px;
     padding: 5px;
     padding-left: 15px;
     margin-left: 5px;
-    font-size: x-large;
+    font-size: large;
  }
 
  #alter{
     border-radius: 18px;
     border-style: none;
-    width: 250px;
+    width: 100px;
     padding: 5px;
     padding-left: 15px;
     margin-left: 5px;
-    font-size: x-large;
+    font-size: large;
  }
 
  #regForm{
@@ -126,7 +128,7 @@
  }
 
  #danke{
-    font-size: x-large;
+    font-size: large;
  }
   
   /* Mark input boxes that gets an error on validation: */
@@ -147,7 +149,7 @@
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: x-large;
+    font-size:large;
     cursor: pointer;
     margin-left: 7px;
   }
@@ -204,22 +206,30 @@
     display: none;
     width: 100vw;
     height: 330px;
-    background-color: #e44982;
+    background-color: #170039;
+    color: aliceblue;
+    font-family: sans-serif;
     padding-bottom: 15px;
     padding-top: 15px;
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
  }
 
  #antworten{
     z-index: 100;
     position: absolute;
     display: none;
-    background-color: #e44982;
+    background-color: #170039;
     padding-bottom: 15px;
     padding-top: 15px;
+    font-family: sans-serif;
+    width: 100vw;
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
  }
 
  #flex{
     display: flex;
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+    overflow-y: scroll;
  }
 
  .antworten1{
@@ -239,34 +249,15 @@
  .bild1{
     width: 200px;
     height: 200px;
-    margin-top: 100px;
-    transform-origin: top;
-    transform: perspective(500px) translateY(-50%) rotateX(-38deg);
+ 
  }
 
  .bild2{
     width: 200px;
     height: 200px;
-    margin-top: 100px;
-    transform-origin: top;
-    transform: perspective(500px) translateY(-50%) rotateX(38deg);
+  
  }
 
- .box{
-    transform-style: preserve-3d;
- }
-
- .box.box1{
-    
-    transform-origin: top;
-    transform: perspective(500px) translateY(-50%) rotateX(-38deg);
- }
-
- .box.box2{
-    
-    transform-origin: top;
-    transform: perspective(500px) translateY(-50%) rotateX(38deg);
- }
 
  .inline{
     /*display: inline-block;*/
@@ -346,3 +337,24 @@
     display: none;
     
  }
+
+
+ /*media queries*/
+
+ @media (max-width: 479px){
+    #image{
+        width: 150px;
+        left: 2vw;
+        top: 0.2vh;
+    }
+    #heading{
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0 35%);
+        height: 15vh;
+        overflow: visible;
+    }
+    #balken{
+        clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
+    }
+ }
+
+

@@ -35,6 +35,20 @@ const modalTitle = document.querySelector(".modal-title");
 const modalContentWrapper = document.querySelector(".modal-content-wrapper");
 const modalExit = document.querySelector(".modal-exit-button");
 
+//let modal = document.querySelector(".modal");
+
+let mouseModal = (e) => {
+    let x = e.clientX;
+    let y = e.clientY;
+    modal.style.top = y -150 + "px";
+    modal.style.left = x + "px";
+    document.querySelector(".hidden").style.display = "inline";
+}
+
+document.addEventListener("click", (e) => {
+    mouseModal(e);
+})
+
 function showModal(id){
     const content = modalContent[id];
     if (content){
@@ -54,6 +68,8 @@ const intersectObjectsNames = [
     "Haus",
     "Straße",
 ];
+
+
 
 const loader = new GLTFLoader();
 
