@@ -24,10 +24,14 @@ const modalContent = {
 title: "Antwort #1",
 content: "Gianina(22) wünscht sich mehr bezahlbaren Wohnraum",
     },
-    "Straße":{
+    "Bauarbeiter":{
 title: "Antwort #2",
-content: "??????",
+content: "Michael(54) wünscht sich das die Infrastruktur besser instand gehalten wird",
     },
+    "Arzt":{
+title: "Antwort #3",
+content: "Patricia(53) wünscht sich bessere ärztliche Versorgung"
+    }
 };
 
 const modal = document.querySelector(".modal");
@@ -67,13 +71,15 @@ const intersectObjects = [];
 const intersectObjectsNames = [
     "Haus",
     "Straße",
+    "Bauarbeiter",
+    "Arzt",
 ];
 
 
 
 const loader = new GLTFLoader();
 
-loader.load( "./ground3.glb", function ( glb ) {
+loader.load( "./ground5.glb", function ( glb ) {
   glb.scene.traverse((child) => {
     if(intersectObjectsNames.includes(child.name)){
         intersectObjects.push(child);
