@@ -133,9 +133,7 @@ body{
     display: inline;
  }
 
- #danke{
-    font-size: large;
- }
+
   
   /* Mark input boxes that gets an error on validation: */
   input.invalid {
@@ -348,6 +346,20 @@ body{
  }
 
 
+ #danke{
+   font-size: large;
+   font-family: sans-serif;
+   color: aliceblue;
+   z-index: 3000;
+   position: relative;
+}
+
+.Danke{
+   background-color: none;
+   margin-left: 1000px;
+}
+
+
  /*media queries*/
 
  @media (max-width: 479px){
@@ -373,7 +385,7 @@ body{
         justify-content: center;
     }
     #frage{
-        width: 330px;
+        width: 300px;
     }
     #vorname{
       width: 100px;
@@ -383,6 +395,19 @@ body{
     }
     .modal{
       display: none;
+    }
+    #danke{
+      
+      color: #170039;
+    }
+    .Danke{
+      margin-top: -20px;
+      position: absolute;
+      z-index: 100;
+      width: 100vw;
+      padding: 10px;
+      margin-left: 8vw;
+      margin-right: 8vw;
     }
  }
 
