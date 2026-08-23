@@ -289,6 +289,7 @@ body{
     background-color: aliceblue;
     color: 170039;
     border: none;
+    display: none;
  }
 
  .modal-wrapper{
@@ -411,4 +412,53 @@ body{
     }
  }
 
+ 
+ @media (max-width: 1024px){
+   #image{
+       width: 150px;
+       left: 2vw;
+       top: 0.2vh;
+   }
+   #heading{
+       clip-path: polygon(0 0, 100% 0, 100% 60%, 0 35%);
+       height: 15vh;
+       overflow: visible;
+   }
+   #balken{
+       clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
+       overflow:visible;
+   }
+   #links{
+       margin-left: auto;
+       margin-right: auto;
+       margin-top: -0.9vh;
+       z-index: 100;
+       justify-content: center;
+   }
+   #frage{
+       width: 300px;
+   }
+   #vorname{
+     width: 100px;
+   }
+   #alter{
+     width: 70px;
+   }
+   .modal{
+     display: none;
+   }
+   #danke{
+     
+     color: #170039;
+   }
+   .Danke{
+     margin-top: -20px;
+     position: absolute;
+     z-index: 100;
+     width: 100vw;
+     padding: 10px;
+     margin-left: 8vw;
+     margin-right: 8vw;
+   }
+}
 
