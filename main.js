@@ -79,7 +79,7 @@ const intersectObjectsNames = [
 
 const loader = new GLTFLoader();
 
-loader.load( "./ground5.glb", function ( glb ) {
+loader.load( "./ground8.glb", function ( glb ) {
   glb.scene.traverse((child) => {
     if(intersectObjectsNames.includes(child.name)){
         intersectObjects.push(child);
@@ -109,9 +109,9 @@ scene.add( light );
 
 const camera = new THREE.PerspectiveCamera( 75, sizes.width / sizes.height, 0.1, 1000 );
 
-camera.position.x = 1.4;
-camera.position.y = 0.5;
-camera.position.z = 1.5;
+camera.position.x = 1.7;
+camera.position.y = 1.3;
+camera.position.z = 1.9;
 
 const controls = new OrbitControls(camera, canvas);
 controls.update;
