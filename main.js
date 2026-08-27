@@ -79,7 +79,7 @@ const intersectObjectsNames = [
 
 const loader = new GLTFLoader();
 
-loader.load( "./ground8.glb", function ( glb ) {
+loader.load( "./ground11.glb", function ( glb ) {
   glb.scene.traverse((child) => {
     if(intersectObjectsNames.includes(child.name)){
         intersectObjects.push(child);
