@@ -360,6 +360,15 @@ body{
    margin-left: 1000px;
 }
 
+#Abstand{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+#impLinks{
+   margin-left: 2vw;
+   margin-top: 2vh;
+}
 
  /*media queries*/
 
